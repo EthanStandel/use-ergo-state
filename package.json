@@ -1,7 +1,7 @@
 {
   "name": "use-ergo-state",
   "private": false,
-  "version": "3.0.2",
+  "version": "0.0.1",
   "type": "module",
   "files": [
     "dist"
