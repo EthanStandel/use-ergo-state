@@ -1,8 +1,6 @@
 import { useState, useRef } from "react";
 
-type Setter<S> = S extends Function
-  ? (newState: S) => S
-  : ((newState: S) => S) | S;
+type Setter<S> = ((newState: S) => S) | (S extends Function ? never : S);
 type OptionalSetter<S = undefined> = S extends undefined
   ? never
   : ((newState: S | undefined) => S | undefined) | S;
